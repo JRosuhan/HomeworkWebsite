@@ -1275,13 +1275,9 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.2s, transform 0.2s, background 0.2s;
     padding: 0;
-}
-
-.img-carousel:hover .img-car-btn {
-    opacity: 1;
 }
 
 .img-car-prev { left: 8px; }
@@ -1294,7 +1290,8 @@ footer {
 }
 
 .img-car-btn:disabled {
-    opacity: 0.25 !important;
+    opacity: 0 !important;
+    pointer-events: none;
     cursor: default;
 }
 
