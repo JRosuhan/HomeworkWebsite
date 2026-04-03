@@ -3,45 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homework | Certified Homie Hub</title>
+    <title>Homework Iloilo | Study Hub & Work Space</title>
+ 
+    <!-- SEO -->
+    <meta name="description" content="Homework Iloilo — Your official study spot in Jaro, Iloilo City. ₱25/hr WiFi, function rooms, study bundles, and cafe bar. Open Mon–Sat 10AM–9PM.">
+    <meta name="keywords" content="study hub Iloilo, study cafe Iloilo, function room Jaro, Homework Iloilo, study spot Iloilo">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://homeworkiloilo.netlify.app/">
+ 
+    <!-- Open Graph -->
+    <meta property="og:title" content="Homework Iloilo | Study Hub & Work Space — Jaro, Iloilo City">
+    <meta property="og:description" content="Your official study spot in Jaro, Iloilo City. ₱25/hr, fiber WiFi, function rooms & cafe bar.">
+    <meta property="og:url" content="https://homeworkiloilo.netlify.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://homeworkiloilo.netlify.app/img/perks.jpg">
+ 
+    <!-- Fonts & Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
+ 
     <!-- ═══ UNIFIED HEADER BAR ═══ -->
     <header class="site-header">
         <div class="header-inner">
-            <span class="main-logo">HOMEWORK</span>
-
+            <a href="#" class="main-logo-link"><img src="logo.png" alt="Homework Iloilo" class="main-logo-img"></a>
+ 
             <!-- Hamburger (mobile only) -->
             <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
-
+ 
             <!-- Desktop nav links -->
             <nav class="nav-container">
                 <a href="#offers">Offers</a>
                 <a href="#rooms">Rooms</a>
+                <a href="#cafe">Cafe Bar</a>
                 <a href="#bundles">Bundles</a>
                 <a href="#terms">Terms &amp; Conditions</a>
             </nav>
         </div>
     </header>
-
+ 
     <!-- ═══ HERO ═══ -->
     <section class="hero">
         <div class="title-wrapper">
-            <h1 class="certified-title">HOMEWORK</h1>
+            <img src="homework-title.png" alt="HOMEWORK" class="certified-title-img">
             <div class="sub-badge">Certified Homie</div>
         </div>
         <h2 class="hero-subtitle">Your official study spot</h2>
         <p class="hero-description">The official study hub for the leaders of tomorrow. Keep it real, keep it grinding.</p>
     </section>
-
+ 
     <!-- ═══ OFFERS / PERKS ═══ -->
     <section id="offers">
+        <!-- Section decos -->
+        <div class="deco deco-s1" aria-hidden="true"></div>
+        <div class="deco deco-s2" aria-hidden="true"></div>
+        <!-- Lightbulb deco — top-left -->
+        <svg class="deco deco-s3" aria-hidden="true" viewBox="0 0 60 90" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="30" cy="32" rx="22" ry="22" fill="#ffeb3b" opacity="0.2"/>
+            <ellipse cx="30" cy="30" rx="18" ry="18" fill="#ffeb3b" stroke="#1a1a1a" stroke-width="3"/>
+            <path d="M23 30 Q27 24 30 30 Q33 36 37 30" fill="none" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round"/>
+            <rect x="22" y="44" width="16" height="5" rx="2" fill="#1a1a1a"/>
+            <rect x="23" y="50" width="14" height="5" rx="2" fill="#1a1a1a"/>
+            <rect x="24" y="56" width="12" height="5" rx="3" fill="#1a1a1a"/>
+            <ellipse cx="24" cy="22" rx="4" ry="3" fill="white" opacity="0.4" transform="rotate(-20 24 22)"/>
+            <line x1="30" y1="4"  x2="30" y2="0"  stroke="#ffeb3b" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="48" y1="10" x2="51" y2="7"  stroke="#ffeb3b" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="54" y1="30" x2="58" y2="30" stroke="#ffeb3b" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="12" y1="10" x2="9"  y2="7"  stroke="#ffeb3b" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="6"  y1="30" x2="2"  y2="30" stroke="#ffeb3b" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
         <center><h2 class="section-title">THE PERKS</h2></center>
         <div class="perks-container">
             <div class="featured-perks-img slide-in slide-from-left">
@@ -61,141 +95,228 @@
                     <h3>Free Charge</h3>
                     <p>Juice up your tech at every single station.</p>
                 </div>
-                <div class="sticker-card red-card slide-in slide-from-right delay-4">
-                    <h3>Cafe Bar</h3>
-                    <p>Artisanal coffee and snacks for your brain.</p>
-                </div>
+                <a href="#cafe" class="sticker-card cafe-bar-card slide-in slide-from-right delay-4">
+                    <div class="cafe-bar-content">
+                        <span class="cafe-bar-label"></span>
+                        <span class="cafe-bar-arrow" aria-label="Go to Cafe Bar section">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                                <polyline points="12 5 19 12 12 19"/>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
-
+ 
     <!-- ═══ FUNCTION ROOMS ═══ -->
     <section id="rooms" class="spaces-bg">
         <center><h2 class="section-title">FUNCTION ROOMS</h2></center>
-        <div class="sticker-grid">
 
-            <div class="sticker-card slide-in slide-from-left delay-1">
-                <img src="img/conference.jpg" alt="Conference Room">
-                <h3>Conference Room</h3>
-                <p>Max 8 Homies. High-end privacy for projects and group meetings.</p>
-                <h4 class="amenities-title">Amenities</h4>
-                <ul class="amenities-list">
-                    <li><i class="fas fa-bolt"></i> Extension Cord</li>
-                    <li><i class="fas fa-marker"></i> Whiteboard and Markers</li>
-                    <li><i class="fas fa-desktop"></i> TV for Projection</li>
-                </ul>
-                <div class="price-row">
-                    <div class="price-tag academic-rate">Academic: ₱180/HR</div>
-                    <div class="price-tag corporate-rate">Corporate: ₱250/HR</div>
-                </div>
-                <a class="book-now-btn" href="https://m.me/YOUR_FB_PAGE" target="_blank" rel="noopener">
-                    <i class="fab fa-facebook-messenger"></i> BOOK NOW
-                </a>
+        <div class="rooms-grid">
+
+                    <div class="sticker-card room-card">
+                        <div class="img-carousel">
+                            <button class="img-car-btn img-car-prev" aria-label="Previous image">&#8249;</button>
+                            <div class="img-car-track-wrap">
+                                <div class="img-car-track">
+                                    <img src="img/conference.jpg"  alt="Conference Room 1">
+                                    <img src="img/conference2.jpg" alt="Conference Room 2">
+                                    <img src="img/conference3.jpg" alt="Conference Room 3">
+                                    <img src="img/conference4.jpg" alt="Conference Room 4">
+                                </div>
+                            </div>
+                            <button class="img-car-btn img-car-next" aria-label="Next image">&#8250;</button>
+                            <div class="img-car-dots"></div>
+                        </div>
+                        <h3>Conference Room</h3>
+                        <p>Max 8 Homies. High-end privacy for projects and group meetings.</p>
+                        <h4 class="amenities-title">Amenities</h4>
+                        <ul class="amenities-list">
+                            <li><i class="fas fa-desktop"></i> TV for Projection</li>
+                            <li><i class="fas fa-marker"></i> Whiteboard and Markers</li>
+                            <li><i class="fas fa-plug"></i> Extension Cord</li>
+                        </ul>
+                        <div class="price-row">
+                            <div class="price-tag academic-rate">Academic: &#x20B1;180/HR</div>
+                            <div class="price-tag corporate-rate">Corporate: &#x20B1;250/HR</div>
+                        </div>
+                        <a class="book-now-btn" href="https://www.facebook.com/HomeWorkIloilo/" target="_blank" rel="noopener"><i class="fab fa-facebook-messenger"></i> BOOK NOW</a>
+                    </div>
+
+                    <div class="sticker-card room-card" data-index="1">
+                        <div class="img-carousel">
+                            <button class="img-car-btn img-car-prev" aria-label="Previous image">&#8249;</button>
+                            <div class="img-car-track-wrap">
+                                <div class="img-car-track">
+                                    <img src="img/office.jpg"  alt="The Office 1">
+                                    <img src="img/office2.jpg" alt="The Office 2">
+                                    <img src="img/office3.jpg" alt="The Office 3">
+                                    <img src="img/office4.jpg" alt="The Office 4">
+                                </div>
+                            </div>
+                            <button class="img-car-btn img-car-next" aria-label="Next image">&#8250;</button>
+                            <div class="img-car-dots"></div>
+                        </div>
+                        <h3>The Office</h3>
+                        <p>Max 10 Homies. Large capacity workspace for your entire squad.</p>
+                        <h4 class="amenities-title">Amenities</h4>
+                        <ul class="amenities-list">
+                            <li><i class="fas fa-video"></i> Projector</li>
+                            <li><i class="fas fa-volume-up"></i> Speaker</li>
+                            <li><i class="fas fa-microphone-alt"></i> Microphone</li>
+                            <li><i class="fas fa-plug"></i> Extension Cord</li>
+                        </ul>
+                        <div class="price-row">
+                            <div class="price-tag academic-rate">Academic: &#x20B1;180/HR</div>
+                            <div class="price-tag corporate-rate">Corporate: &#x20B1;250/HR</div>
+                        </div>
+                        <a class="book-now-btn" href="https://www.facebook.com/HomeWorkIloilo/" target="_blank" rel="noopener"><i class="fab fa-facebook-messenger"></i> BOOK NOW</a>
+                    </div>
+
+                    <div class="sticker-card room-card" data-index="2">
+                        <div class="img-carousel">
+                            <button class="img-car-btn img-car-prev" aria-label="Previous image">&#8249;</button>
+                            <div class="img-car-track-wrap">
+                                <div class="img-car-track">
+                                    <img src="img/backyard.jpg"  alt="Backyard 1">
+                                    <img src="img/backyard2.jpg" alt="Backyard 2">
+                                    <img src="img/backyard3.jpg" alt="Backyard 3">
+                                    <img src="img/backyard4.jpg" alt="Backyard 4">
+                                </div>
+                            </div>
+                            <button class="img-car-btn img-car-next" aria-label="Next image">&#8250;</button>
+                            <div class="img-car-dots"></div>
+                        </div>
+                        <h3>Backyard</h3>
+                        <p>Max 6 Homies. Fresh air and quiet focus for independent study.</p>
+                        <h4 class="amenities-title">Amenities</h4>
+                        <ul class="amenities-list">
+                            <li><i class="fas fa-couch"></i> Bean bags and Cushions</li>
+                            <li><i class="fas fa-marker"></i> Whiteboard and Markers</li>
+                            <li><i class="fas fa-plug"></i> Extension Cord</li>
+                        </ul>
+                        <div class="price-row">
+                            <div class="price-tag academic-rate">Academic: &#x20B1;180/HR</div>
+                            <div class="price-tag corporate-rate">Corporate: &#x20B1;250/HR</div>
+                        </div>
+                        <a class="book-now-btn" href="https://www.facebook.com/HomeWorkIloilo/" target="_blank" rel="noopener"><i class="fab fa-facebook-messenger"></i> BOOK NOW</a>
+                    </div>
+
+                    <div class="sticker-card room-card" data-index="3">
+                        <div class="img-carousel">
+                            <button class="img-car-btn img-car-prev" aria-label="Previous image">&#8249;</button>
+                            <div class="img-car-track-wrap">
+                                <div class="img-car-track">
+                                    <img src="img/mainhall.jpg"  alt="Main Hall 1">
+                                    <img src="img/mainhall2.jpg" alt="Main Hall 2">
+                                    <img src="img/mainhall3.jpg" alt="Main Hall 3">
+                                    <img src="img/mainhall4.jpg" alt="Main Hall 4">
+                                </div>
+                            </div>
+                            <button class="img-car-btn img-car-next" aria-label="Next image">&#8250;</button>
+                            <div class="img-car-dots"></div>
+                        </div>
+                        <h3>Main Hall</h3>
+                        <p>Max 20 Homies. Perfect for deep focus and solo study sessions.</p>
+                        <h4 class="amenities-title">Amenities</h4>
+                        <ul class="amenities-list">
+                            <li><i class="fas fa-video"></i> Projector</li>
+                            <li><i class="fas fa-volume-up"></i> Speaker</li>
+                            <li><i class="fas fa-microphone-alt"></i> Microphone</li>
+                            <li><i class="fas fa-plug"></i> Extension Cord</li>
+                        </ul>
+                        <div class="price-row">
+                            <div class="price-tag academic-rate">Academic: &#x20B1;500/HR</div>
+                            <div class="price-tag corporate-rate">Corporate: &#x20B1;750/HR</div>
+                        </div>
+                        <a class="book-now-btn" href="https://www.facebook.com/HomeWorkIloilo/" target="_blank" rel="noopener"><i class="fab fa-facebook-messenger"></i> BOOK NOW</a>
+                    </div>
+
+        </div><!-- /.rooms-grid -->
+
+    </section>
+    <!-- ═══ CAFE BAR ═══ -->
+    <section id="cafe" class="cafe-section">
+        <center><h2 class="section-title">CAFE BAR</h2></center>
+        <p class="cafe-tagline slide-in slide-from-bottom">Fuel your grind. Sip, study, repeat.</p>
+
+        <div class="cafe-gallery">
+            <div class="cafe-gallery-main slide-in slide-from-left">
+                <img src="img/cafe1.jpg" alt="Cafe Bar drinks">
+                <div class="cafe-img-label">THE SPOT</div>
             </div>
-
-            <div class="sticker-card slide-in slide-from-right delay-2">
-                <img src="img/office.jpg" alt="The Office">
-                <h3>The Office</h3>
-                <p>Max 10 Homies. Large capacity workspace for your entire squad.</p>
-                <h4 class="amenities-title">Amenities</h4>
-                <ul class="amenities-list">
-                    <li><i class="fas fa-plug"></i> Extension Cord</li>
-                    <li><i class="fas fa-video"></i> Projector</li>
-                    <li><i class="fas fa-volume-up"></i> Speaker</li>
-                    <li><i class="fas fa-microphone-alt"></i> Microphone</li>
-                </ul>
-                <div class="price-row">
-                    <div class="price-tag academic-rate">Academic: ₱180/HR</div>
-                    <div class="price-tag corporate-rate">Corporate: ₱250/HR</div>
+            <div class="cafe-gallery-grid">
+                <div class="cafe-gallery-item slide-in slide-from-right delay-1">
+                    <img src="img/cafe2.jpg" alt="Coffee drinks">
+                    <div class="cafe-img-label">BREWS</div>
                 </div>
-                <a class="book-now-btn" href="https://m.me/YOUR_FB_PAGE" target="_blank" rel="noopener">
-                    <i class="fab fa-facebook-messenger"></i> BOOK NOW
-                </a>
-            </div>
-
-            <div class="sticker-card slide-in slide-from-left delay-3">
-                <img src="img/backyard.jpg" alt="Backyard">
-                <h3>Backyard</h3>
-                <p>Max 6 Homies. Fresh air and quiet focus for independent study.</p>
-                <h4 class="amenities-title">Amenities</h4>
-                <ul class="amenities-list">
-                    <li><i class="fas fa-plug"></i> Extension Cord</li>
-                    <li><i class="fas fa-marker"></i> Whiteboard and Markers</li>
-                    <li><i class="fas fa-couch"></i> Bean bags and Cushions</li>
-                </ul>
-                <div class="price-row">
-                    <div class="price-tag academic-rate">Academic: ₱180/HR</div>
-                    <div class="price-tag corporate-rate">Corporate: ₱250/HR</div>
+                <div class="cafe-gallery-item slide-in slide-from-right delay-2">
+                    <img src="img/cafe3.jpg" alt="Cafe snacks">
+                    <div class="cafe-img-label">BITES</div>
                 </div>
-                <a class="book-now-btn" href="https://m.me/YOUR_FB_PAGE" target="_blank" rel="noopener">
-                    <i class="fab fa-facebook-messenger"></i> BOOK NOW
-                </a>
-            </div>
-
-            <div class="sticker-card slide-in slide-from-right delay-4">
-                <img src="img/mainhall.jpg" alt="Main Hall">
-                <h3>Main Hall</h3>
-                <p>Max 1 Homie. Perfect for deep focus and solo study sessions.</p>
-                <h4 class="amenities-title">Amenities</h4>
-                <ul class="amenities-list">
-                    <li><i class="fas fa-plug"></i> Extension Cord</li>
-                    <li><i class="fas fa-video"></i> Projector</li>
-                    <li><i class="fas fa-volume-up"></i> Speaker</li>
-                    <li><i class="fas fa-microphone-alt"></i> Microphone</li>
-                </ul>
-                <div class="price-row">
-                    <div class="price-tag academic-rate">Academic: ₱500/HR</div>
-                    <div class="price-tag corporate-rate">Corporate: ₱750/HR</div>
+                <div class="cafe-gallery-item slide-in slide-from-right delay-3">
+                    <img src="img/cafe4.jpg" alt="Study drinks">
+                    <div class="cafe-img-label">SIPS</div>
                 </div>
-                <a class="book-now-btn" href="https://m.me/YOUR_FB_PAGE" target="_blank" rel="noopener">
-                    <i class="fab fa-facebook-messenger"></i> BOOK NOW
-                </a>
+                <div class="cafe-gallery-item slide-in slide-from-right delay-4">
+                    <img src="img/cafe5.jpg" alt="Cafe vibes">
+                    <div class="cafe-img-label">VIBES</div>
+                </div>
             </div>
+        </div>
 
+        <div class="cafe-cta slide-in slide-from-bottom">
+            <p>Corkage applies for outside drinks. See <a href="#terms">Terms &amp; Conditions</a> for details.</p>
         </div>
     </section>
 
     <!-- ═══ STUDY BUNDLES ═══ -->
     <section id="bundles">
+        <!-- Section decos -->
+        <div class="deco deco-s1" aria-hidden="true"></div>
+    
+        <div class="deco deco-s3" aria-hidden="true"></div>
         <center><h2 class="section-title">STUDY BUNDLES</h2></center>
         <div class="sticker-grid">
-
+ 
             <div class="sticker-card slide-in slide-from-left delay-1">
                 <div class="bundle-badge">STARTER</div>
                 <h3>5 + 1 Bundle</h3>
                 <p>Get 6 total hours of access. Valid for 2 days from activation. Ideal for solo grinders catching up on deadlines.</p>
                 <div class="price-tag">₱125</div>
             </div>
-
+ 
             <div class="sticker-card slide-in slide-from-right delay-2">
                 <div class="bundle-badge red-badge">MOST WANTED</div>
                 <h3>10 + 3 Bundle</h3>
                 <p>Our best-seller for finals week. Get 13 total hours of access. Valid for 5 days. High value for students balancing multiple subjects.</p>
-                <div class="price-tag">₱150</div>
+                <div class="price-tag">₱250</div>
             </div>
-
+ 
             <div class="sticker-card slide-in slide-from-left delay-3">
                 <div class="bundle-badge cyan-badge">VETERAN</div>
                 <h3>15-Day Membership</h3>
                 <p>Designed for the consistent achiever. Enjoy unlimited daily access for 15 consecutive days. Includes priority seating and stable high-speed WiFi.</p>
                 <div class="price-tag">₱1,600</div>
             </div>
-
+ 
             <div class="sticker-card slide-in slide-from-right delay-4">
                 <div class="bundle-badge green-badge">GODLIKE</div>
                 <h3>30-Day Membership</h3>
                 <p>The ultimate academic investment. 30 days of unlimited access. Best for board exam reviewees and thesis students requiring a daily professional environment.</p>
                 <div class="price-tag">₱2,000</div>
             </div>
-
+ 
         </div>
     </section>
-
+ 
     <!-- ═══ TERMS & CONDITIONS ═══ -->
     <section id="terms" class="terms-bg">
         <center><h2 class="section-title">TERMS AND CONDITIONS</h2></center>
         <div class="terms-container">
-
+ 
             <!-- Row 1 -->
             <div class="term-item slide-in slide-from-bottom delay-1">
                 <span class="term-number">01</span>
@@ -211,7 +332,7 @@
                     <p>Excess of 15 minutes will be counted as an additional hour. The customer is responsible for tracking their own time.</p>
                 </div>
             </div>
-
+ 
             <!-- Row 2 -->
             <div class="term-item slide-in slide-from-bottom delay-1">
                 <span class="term-number">03</span>
@@ -227,7 +348,7 @@
                     <p>₱50/drink. For 3 or more drinks, a fixed charge of ₱150 applies.</p>
                 </div>
             </div>
-
+ 
             <!-- Row 3 -->
             <div class="term-item slide-in slide-from-bottom delay-1">
                 <span class="term-number">05</span>
@@ -243,7 +364,7 @@
                     <p>A 15-minute grace period is provided. Customers arriving earlier will be charged ₱20/hr.</p>
                 </div>
             </div>
-
+ 
             <!-- Row 4 -->
             <div class="term-item slide-in slide-from-bottom delay-1">
                 <span class="term-number">07</span>
@@ -266,47 +387,57 @@
                     <p>By completing the booking form, the customer agrees to all House Rules — including maintaining a <strong>Moderate Noise Level</strong> and accepting responsibility for any damages. Homework reserves the right to mediate disputes or suspend booking privileges.</p>
                 </div>
             </div>
-
+ 
         </div>
     </section>
-
-    <!-- ═══ FOOTER ═══ -->
+<!-- ═══ FOOTER ═══ -->
     <footer>
         <div class="footer-content">
             <div class="footer-section">
                 <h4>HOMEWORK</h4>
-                <p>Established 2026. Your Official Study Spot.<br>Certified Homie Hub.</p>
+                <p>Established 2017. <br> Official Study Spot.<br>Certified Homie Hub.</p>
                 <div class="social-links">
                     <!-- Replace YOUR_FB_PAGE with e.g. homeworkhub -->
-                    <a href="https://facebook.com/YOUR_FB_PAGE" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com/HomeWorkIloilo/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <!-- Replace YOUR_IG_HANDLE with e.g. homeworkhub -->
-                    <a href="https://instagram.com/YOUR_IG_HANDLE" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <!-- Replace YOUR_EMAIL with e.g. hello@homeworkhub.com -->
-                    <a href="/cdn-cgi/l/email-protection#6a33253f38352f272b2326" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fhomeworkiloilo%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExd0xMU0lTN1FqRzJleGxLQXNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5dhDBUq_zTyPdiiBq83I8Eal4U5dS6NkTHQDiX03SYm84m0r1-dPytd-pLtw_aem_F7nNID6z_lnp5fN1FoVG3g&h=AT4GGbKsEVb_wd70cAN4fgcZb47mQZWkNvbamIRa50je38TyrqMmKr4pdTZYi5fDBW7vTzMg--Hhm6A4AZ_lADqgeXMbgK4M3LzJwEJu4VPpPC9Jw1wwT4UJCiZVHGQucFS0" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <div class="footer-section">
                 <h4>Quick Links</h4>
                 <p><a href="#offers">Offers</a></p>
                 <p><a href="#rooms">Rooms</a></p>
+                <p><a href="#cafe">Cafe Bar</a></p>
                 <p><a href="#bundles">Bundles</a></p>
-            </div>
-            <div class="footer-section">
-                <h4>Find Us</h4>
-                <!-- Replace YOUR_ADDRESS with your actual address for the map pin -->
-                <a href="https://maps.google.com/?q=YOUR_ADDRESS" target="_blank" rel="noopener" class="location-link">
-                    <i class="fas fa-map-marker-alt"></i> Your Address Here,<br>Quezon City, Philippines
-                </a>
-                <!-- Replace with your actual phone number -->
-                <p style="margin-top:8px;"><a href="tel:+639123456789"><i class="fas fa-phone"></i> +63 912 345 6789</a></p>
-                <!-- Replace YOUR_FB_PAGE with your page username -->
-                <p style="margin-top:6px;"><a href="https://m.me/YOUR_FB_PAGE" target="_blank" rel="noopener"><i class="fab fa-facebook-messenger"></i> Message us on Messenger</a></p>
+                <p><a href="#terms">Terms &amp; Conditions</a></p>
             </div>
             <div class="footer-section">
                 <h4>Hours</h4>
                 <p>Mon – Sat: 10AM – 9PM</p>
                 <p>Sun: 12NN – 9PM</p>
             </div>
+            <div class="footer-section footer-findus-map">
+                <div class="footer-findus-info">
+                    <h4>Find Us</h4>
+                    <a href="https://maps.app.goo.gl/USsDfB7hYmpHbqWg9" target="_blank" rel="noopener" class="location-link">
+                        <i class="fas fa-map-marker-alt"></i> Lopez Jaena St, Jaro, <br> Iloilo City, Philippines
+                    </a>
+                    <p style="margin-top:4px;"><i class="fas fa-phone"></i> (033) 501 0381</p>
+                    <p style="margin-top:px;"><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="482027252d3f273a233b3c3d2c31203d2a082f25292124662b2725">[email&#160;protected]</a></a></p>
+                </div>
+                <div class="footer-map-col">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.066592499804!2d122.55346309999999!3d10.729347299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aee5e96a24ce03%3A0xbc8b4c8725fcbc70!2sHomeWork%20Study%20Hub!5e0!3m2!1sen!2sph!4v1774857355424!5m2!1sen!2sph" 
+                        height="260"
+                        style="border:0; border-radius:8px; filter: grayscale(20%) contrast(1.1);"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Homework Iloilo location map">
+                    </iframe>
+                </div>
+            </div>
+        </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 HOMEWORK. All rights reserved.</p>

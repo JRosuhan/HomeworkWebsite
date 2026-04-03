@@ -12,18 +12,14 @@
     window.addEventListener('scroll', () => {
         if (!ticking) {
             requestAnimationFrame(() => {
-                const currentY    = window.scrollY;
+                const currentY      = window.scrollY;
                 const scrollingDown = currentY > lastScrollY && currentY > 80;
-
                 header.classList.toggle('nav-hidden', scrollingDown);
-
-                // Close mobile menu when header hides
                 if (scrollingDown) {
                     navContainer.classList.remove('open');
                     navToggle.classList.remove('open');
                     navToggle.setAttribute('aria-expanded', 'false');
                 }
-
                 lastScrollY = currentY;
                 ticking     = false;
             });
@@ -39,7 +35,6 @@
         navToggle.setAttribute('aria-expanded', String(isOpen));
     });
 
-    // Close when a nav link is tapped
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             navContainer.classList.remove('open');
@@ -48,7 +43,6 @@
         });
     });
 
-    // Close when clicking outside
     document.addEventListener('click', (e) => {
         if (!header.contains(e.target)) {
             navContainer.classList.remove('open');
@@ -68,5 +62,49 @@
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.slide-in').forEach(el => observer.observe(el));
+
+    /* ─── Room image carousels (inner per-card) ─── */
+    document.querySelectorAll('.img-carousel').forEach(function(carousel) {
+        var track  = carousel.querySelector('.img-car-track');
+        var imgs   = Array.from(track.querySelectorAll('img'));
+        var dotsEl = carousel.querySelector('.img-car-dots');
+        var prev   = carousel.querySelector('.img-car-prev');
+        var next   = carousel.querySelector('.img-car-next');
+        var cur    = 0;
+
+        // Build dots
+        imgs.forEach(function(_, i) {
+            var d = document.createElement('button');
+            d.className = 'img-car-dot' + (i === 0 ? ' active' : '');
+            d.setAttribute('aria-label', 'Image ' + (i + 1));
+            d.addEventListener('click', function(e) { e.stopPropagation(); goImg(i); });
+            dotsEl.appendChild(d);
+        });
+
+        var dots = Array.from(dotsEl.querySelectorAll('.img-car-dot'));
+
+        function goImg(idx) {
+            cur = Math.max(0, Math.min(idx, imgs.length - 1));
+            track.style.transform = 'translateX(' + (-cur * 100) + '%)';
+            dots.forEach(function(d, i) { d.classList.toggle('active', i === cur); });
+            prev.disabled = cur === 0;
+            next.disabled = cur === imgs.length - 1;
+        }
+
+        prev.addEventListener('click', function(e) { e.stopPropagation(); goImg(cur - 1); });
+        next.addEventListener('click', function(e) { e.stopPropagation(); goImg(cur + 1); });
+
+        // Touch swipe inside card
+        var tx = 0, dragging = false;
+        track.addEventListener('touchstart', function(e) { tx = e.touches[0].clientX; dragging = false; }, { passive: true });
+        track.addEventListener('touchmove',  function(e) { if (Math.abs(e.touches[0].clientX - tx) > 8) dragging = true; }, { passive: true });
+        track.addEventListener('touchend',   function(e) {
+            if (!dragging) return;
+            var diff = tx - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 40) goImg(diff > 0 ? cur + 1 : cur - 1);
+        });
+
+        goImg(0);
+    });
 
 })();
