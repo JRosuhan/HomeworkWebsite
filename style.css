@@ -729,11 +729,15 @@ section { padding: clamp(50px, 8vw, 100px) clamp(16px, 6%, 8%); }
     border-radius: 14px;
     overflow: hidden;
     box-shadow: 8px 8px 0px #f37e19;
+    display: flex;
+    flex-direction: column;
 }
 
 .cafe-gallery-main img {
     width: 100%;
-    height: 100%;
+    flex: 1;
+    min-height: 0;
+    max-width: unset;
     object-fit: cover;
     display: block;
     transition: transform 0.4s ease;
@@ -756,11 +760,14 @@ section { padding: clamp(50px, 8vw, 100px) clamp(16px, 6%, 8%); }
     overflow: hidden;
     box-shadow: 5px 5px 0px #f37e19;
     aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .cafe-gallery-item img {
     width: 100%;
-    height: 100%;
+    flex: 1;
+    min-height: 0;
     object-fit: cover;
     display: block;
     transition: transform 0.4s ease;
@@ -771,10 +778,7 @@ section { padding: clamp(50px, 8vw, 100px) clamp(16px, 6%, 8%); }
 }
 
 .cafe-img-label {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    position: relative;
     background: var(--black);
     color: var(--yellow);
     font-family: 'Oswald', sans-serif;
@@ -784,6 +788,7 @@ section { padding: clamp(50px, 8vw, 100px) clamp(16px, 6%, 8%); }
     text-align: center;
     padding: 5px 0;
     border-top: 2px solid var(--yellow);
+    flex-shrink: 0;
 }
 
 .cafe-gallery-main .cafe-img-label {
@@ -808,9 +813,10 @@ section { padding: clamp(50px, 8vw, 100px) clamp(16px, 6%, 8%); }
 @media (max-width: 768px) {
     .cafe-gallery {
         grid-template-columns: 1fr;
+        padding: 0 8px;
     }
     .cafe-gallery-main {
-        aspect-ratio: 16 / 9;
+        height: 425px;
     }
     .cafe-gallery-grid {
         grid-template-columns: 1fr 1fr;
