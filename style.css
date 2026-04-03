@@ -358,7 +358,7 @@ section { padding: clamp(50px, 8vw, 100px) clamp(16px, 6%, 8%); }
     background-size: 100% 100% !important;
     background-position: -10px 10px !important;
     padding: 0 !important;
-    min-height: 200px;
+    aspect-ratio: 16 / 9;
     text-decoration: none;
     position: relative;
     overflow: hidden;
