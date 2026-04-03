@@ -352,13 +352,13 @@ section { padding: clamp(50px, 8vw, 100px) clamp(16px, 6%, 8%); }
     z-index: 10;
 }
 
-/* ── Cafe Bar card: full image ── */
+/* ── Cafe Bar card: image as background, text drives height ── */
 .cafe-bar-card {
     background-image: url('img/cafe.png') !important;
-    background-size: 100% 100% !important;
-    background-position: -10px 10px !important;
-    padding: 0 !important;
-    aspect-ratio: 16 / 9;
+    background-size: calc(100% - 24px) auto !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    padding: clamp(20px, 3vw, 35px) !important;
     text-decoration: none;
     position: relative;
     overflow: hidden;
@@ -366,27 +366,28 @@ section { padding: clamp(50px, 8vw, 100px) clamp(16px, 6%, 8%); }
     align-items: stretch;
 }
 
+/* Dark overlay so text is readable over the image */
 .cafe-bar-card::before {
     content: '';
     position: absolute;
     inset: 0;
+    background: rgba(0, 0, 0, 0.45);
     border-radius: 14px;
     z-index: 0;
     transition: opacity 0.3s;
 }
 
 .cafe-bar-card:hover::before {
-    opacity: 0.75;
+    opacity: 0.6;
 }
 
 .cafe-bar-content {
-    position: absolute;
+    position: relative;
     z-index: 1;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: clamp(18px, 3vw, 25px);
+    gap: 10px;
 }
 
 .cafe-bar-label {
@@ -398,10 +399,14 @@ section { padding: clamp(50px, 8vw, 100px) clamp(16px, 6%, 8%); }
     text-shadow: 2px 2px 0px rgba(0,0,0,0.4);
 }
 
+.cafe-bar-card p {
+    color: var(--white);
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+    flex-grow: 1;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+}
+
 .cafe-bar-arrow {
-    right:10px;
-    top: 150px;
-    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -413,7 +418,8 @@ section { padding: clamp(50px, 8vw, 100px) clamp(16px, 6%, 8%); }
     color: var(--black);
     box-shadow: 4px 4px 0px var(--black);
     transition: transform 0.25s, box-shadow 0.25s;
-
+    align-self: flex-start;
+    margin-top: auto;
 }
 
 .cafe-bar-card:hover .cafe-bar-arrow {
