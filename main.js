@@ -8,6 +8,7 @@
     /* ─── Scroll hide / show ─── */
     let lastScrollY = window.scrollY;
     let ticking     = false;
+    const scrollIndicator = document.querySelector('.scroll-down-indicator');
 
     window.addEventListener('scroll', () => {
         if (!ticking) {
@@ -19,6 +20,11 @@
                     navContainer.classList.remove('open');
                     navToggle.classList.remove('open');
                     navToggle.setAttribute('aria-expanded', 'false');
+                }
+                // Fade out scroll indicator as soon as user scrolls
+                if (scrollIndicator) {
+                    scrollIndicator.style.opacity = currentY > 50 ? '0' : '1';
+                    scrollIndicator.style.pointerEvents = currentY > 50 ? 'none' : 'auto';
                 }
                 lastScrollY = currentY;
                 ticking     = false;

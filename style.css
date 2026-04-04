@@ -1171,8 +1171,62 @@ footer {
 }
 
 /* =====================
-   SCROLL ANIMATIONS
+   SCROLL DOWN INDICATOR
    ===================== */
+.scroll-down-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: fit-content;
+    text-decoration: none;
+    color: var(--black);
+    animation: bounce-down 2s ease-in-out infinite;
+    transition: opacity 0.4s ease;
+    z-index: 10;
+}
+
+.scroll-down-text {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background: var(--black);
+    color: var(--yellow);
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 2px solid var(--black);
+    box-shadow: 3px 3px 0px var(--black);
+}
+
+.scroll-down-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: var(--white);
+    border: 3px solid var(--black);
+    border-radius: 50%;
+    box-shadow: 3px 3px 0px var(--black);
+    color: var(--black);
+}
+
+.scroll-down-indicator:hover .scroll-down-arrow {
+    background: var(--cyan);
+}
+
+@keyframes bounce-down {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(10px); }
+}
+
 
 @keyframes fadeUp {
     from { opacity: 0; transform: translateY(40px) rotate(var(--tilt, 0deg)); }
