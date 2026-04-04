@@ -49,23 +49,46 @@
  
     <!-- ═══ HERO ═══ -->
     <section class="hero">
-        <div class="hero-collage-bg"></div>
-        <div class="title-wrapper">
-            <img src="img/homework-title.png" alt="HOMEWORK" class="certified-title-img">
-            <div class="sub-badge">Certified Homie!</div>
+
+        <!-- Left: text panel -->
+        <div class="hero-text-panel">
+            <div class="title-wrapper">
+                <img src="img/homework-title.png" alt="HOMEWORK" class="certified-title-img">
+                <span class="sub-badge">Certified Homie</span>
+            </div>
+            <p class="hero-description">A place to study, work, or chill. Charge, connect, be productive. Come, #DoItAtHomeWork.</p>
         </div>
-        <h2 class="hero-subtitle">Do It At HomeWork</h2>
-        <p class="hero-description">A place to study, work, or chill. Charge, connect, be productive. Come, #DoItAtHomeWork.</p>
+
+        <!-- Right: hero carousel (reuses homie-carousel JS automatically) -->
+        <div class="hero-carousel-panel">
+            <div class="homie-carousel hero-carousel">
+                <!-- 12-pointed star deco — pinned to top-right corner of carousel -->
+                <svg class="deco deco-star-12" aria-hidden="true" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="50.0,2.0 55.7,28.7 74.0,8.4 65.6,34.4 91.6,26.0 71.3,44.3 98.0,50.0 71.3,55.7 91.6,74.0 65.6,65.6 74.0,91.6 55.7,71.3 50.0,98.0 44.3,71.3 26.0,91.6 34.4,65.6 8.4,74.0 28.7,55.7 2.0,50.0 28.7,44.3 8.4,26.0 34.4,34.4 26.0,8.4 44.3,28.7" fill="#ff3d00" stroke="#1a1a1a" stroke-width="3" stroke-linejoin="round"/>
+                </svg>
+                <div class="homie-car-track-wrap">
+                    <div class="homie-car-track">
+                        <div class="homie-car-slide"><img src="img/hero1.jpg" alt="HomeWork Homie 1"></div>
+                        <div class="homie-car-slide"><img src="img/hero2.jpg" alt="HomeWork Homie 2"></div>
+                        <div class="homie-car-slide"><img src="img/hero3.jpg" alt="HomeWork Homie 3"></div>
+                        <div class="homie-car-slide"><img src="img/hero4.jpg" alt="HomeWork Homie 4"></div>
+                        <div class="homie-car-slide"><img src="img/hero5.jpg" alt="HomeWork Homie 5"></div>
+                        <div class="homie-car-slide"><img src="img/hero6.jpg" alt="HomeWork Homie 6"></div>
+                        <div class="homie-car-slide"><img src="img/hero7.jpg" alt="HomeWork Homie 7"></div>
+                        <div class="homie-car-slide"><img src="img/hero8.jpg" alt="HomeWork Homie 8"></div>
+                        <div class="homie-car-slide"><img src="img/hero9.jpg" alt="HomeWork Homie 9"></div>
+                        <div class="homie-car-slide"><img src="img/hero10.jpg" alt="HomeWork Homie 10"></div>
+                    </div>
+                </div>
+                <button class="homie-car-btn homie-car-prev" aria-label="Previous photo">&#8249;</button>
+                <button class="homie-car-btn homie-car-next" aria-label="Next photo">&#8250;</button>
+                <div class="homie-car-dots"></div>
+                <h2 class="hero-subtitle">#DoItAtHomeWork</h2>
+            </div>
+        </div>
+
     </section>
 
-    <a href="#offers" class="scroll-down-indicator" aria-label="Scroll down for more">
-        <span class="scroll-down-text">SCROLL DOWN</span>
-        <span class="scroll-down-arrow">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10 3v14M4 11l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </span>
-    </a>
 
     <!-- ═══ OFFERS / PERKS ═══ -->
     <section id="offers">

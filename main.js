@@ -8,7 +8,6 @@
     /* ─── Scroll hide / show ─── */
     let lastScrollY = window.scrollY;
     let ticking     = false;
-    const scrollIndicator = document.querySelector('.scroll-down-indicator');
 
     window.addEventListener('scroll', () => {
         if (!ticking) {
@@ -20,11 +19,6 @@
                     navContainer.classList.remove('open');
                     navToggle.classList.remove('open');
                     navToggle.setAttribute('aria-expanded', 'false');
-                }
-                // Fade out scroll indicator as soon as user scrolls
-                if (scrollIndicator) {
-                    scrollIndicator.style.opacity = currentY > 50 ? '0' : '1';
-                    scrollIndicator.style.pointerEvents = currentY > 50 ? 'none' : 'auto';
                 }
                 lastScrollY = currentY;
                 ticking     = false;
@@ -114,10 +108,9 @@
     });
 
 })();
-/* ─── Homie photo carousel (reviews section) ─── */
+/* ─── Homie photo carousel (all instances) ─── */
 (function () {
-    var carousel = document.querySelector('.homie-carousel');
-    if (!carousel) return;
+    document.querySelectorAll('.homie-carousel').forEach(function (carousel) {
 
     var track   = carousel.querySelector('.homie-car-track');
     var slides  = Array.from(track.querySelectorAll('.homie-car-slide'));
@@ -189,4 +182,5 @@
 
     goTo(0);
     resetAuto();
+    }); // end forEach
 })();
