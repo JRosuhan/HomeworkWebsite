@@ -957,7 +957,8 @@ footer {
     background: var(--black);
     color: var(--white);
     padding: clamp(60px, 10vw, 100px) clamp(20px, 8%, 10%) 40px;
-    clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 1%, 100% 1%, 100% 100%, 0% 100%);
+    
 }
 
 .footer-content {
@@ -1292,6 +1293,533 @@ footer {
 @media (prefers-reduced-motion: reduce) {
     .slide-in,
     .slide-in.visible { opacity: 1 !important; animation: none !important; }
+}
+
+/* =====================
+   REVIEWS SECTION
+   ===================== */
+.reviews-bg {
+    background-color: var(--black);
+    background-image:
+        linear-gradient(rgba(243, 219, 8, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 230, 4, 0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+    color: var(--white);
+}
+
+.reviews-bg .section-title {
+    background: var(--yellow);
+    color: var(--black);
+    box-shadow: 8px 8px 0px rgba(255,235,59,0.3);
+}
+
+/* ── Homie photo carousel (inside review badge) ── */
+.homie-carousel {
+    position: relative;
+    width: 520px;
+    height: 300px;
+    flex-shrink: 0;
+    aspect-ratio: 16 / 9;
+    flex-shrink: 0;
+    border-radius: 14px;    
+    overflow: hidden;
+    border: 3px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.04);
+    box-shadow: 6px 6px 0px rgba(0,0,0,0.35);
+}
+
+.homie-car-track-wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.homie-car-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.42s cubic-bezier(0.35, 0.85, 0.35, 1);
+    will-change: transform;
+    align-items: stretch;
+}
+
+.homie-car-slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.homie-car-slide img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Placeholder shown until real images are added */
+.homie-car-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.04);
+    color: rgba(255,255,255,0.25);
+}
+
+.homie-car-placeholder i  { font-size: 1.8rem; }
+.homie-car-placeholder span { font-size: 0.68rem; letter-spacing: 0.5px; }
+
+/* Prev / Next buttons */
+.homie-car-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    width: 26px;
+    height: 26px;
+    background: var(--black);
+    color: var(--yellow);
+    border: 2px solid var(--yellow);
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.1rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s, background 0.2s, transform 0.2s;
+    padding: 0;
+}
+
+.homie-carousel:hover .homie-car-btn { opacity: 1; }
+.homie-car-prev { left: 6px; }
+.homie-car-next { right: 6px; }
+
+.homie-car-btn:hover {
+    background: var(--yellow);
+    color: var(--black);
+    transform: translateY(-50%) scale(1.12);
+}
+
+.homie-car-btn:disabled { opacity: 0 !important; pointer-events: none; }
+
+/* Dots */
+.homie-car-dots {
+    position: absolute;
+    bottom: 26px;
+    left: 0; right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    z-index: 5;
+}
+
+.homie-car-dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.3);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s, width 0.2s;
+}
+
+.homie-car-dot.active {
+    background: var(--yellow);
+    width: 14px;
+    border-radius: 3px;
+}
+
+/* Auto-play progress bar */
+.homie-car-progress {
+    position: absolute;
+    bottom: 0; left: 0;
+    height: 3px;
+    background: var(--yellow);
+    width: 0%;
+    z-index: 6;
+    border-radius: 0 2px 2px 0;
+}
+
+/* ─── Badge card layout ─── */
+.google-badge-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.google-badge-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255,255,255,0.05);
+    border: 3px solid rgba(255,255,255,0.12);
+    border-radius: 20px;
+    padding: 24px 28px;
+    max-width: 100%;
+    box-shadow: 8px 8px 0px rgba(0,0,0,0.3);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.google-badge-card:hover {
+    border-color: rgba(255,235,59,0.3);
+    box-shadow: 8px 8px 0px rgba(0,0,0,0.4);
+}
+
+/* Google rating column */
+.google-badge-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+    min-width: 130px;
+}
+
+.google-full-logo {
+    width: 80px;
+    height: auto;
+}
+
+.google-badge-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.4);
+}
+
+.google-badge-score {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: var(--yellow);
+    line-height: 1;
+}
+
+.google-badge-stars {
+    font-size: 1.25rem;
+    color: var(--yellow);
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.google-badge-stars .star-dim { opacity: 0.28; }
+
+.google-badge-sub {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.35);
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* Dividers */
+.google-badge-divider {
+    width: 2px;
+    height: 120px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 2px;
+    flex-shrink: 0;
+    align-self: center;
+}
+
+/* CTA column */
+.google-badge-right {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex-shrink: 0;
+}
+
+.google-badge-cta-text {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--white);
+    line-height: 1.25;
+    white-space: nowrap;
+}
+
+.google-badge-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--white);
+    color: var(--black);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    padding: 12px 22px;
+    border: 3px solid var(--black);
+    border-radius: 8px;
+    box-shadow: 5px 5px 0px var(--yellow);
+    transition: transform 0.2s, box-shadow 0.2s;
+    align-self: flex-start;
+    white-space: nowrap;
+}
+
+.google-badge-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0px var(--yellow);
+}
+
+.google-badge-write-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--yellow);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: opacity 0.2s;
+    align-self: flex-start;
+    white-space: nowrap;
+}
+
+.google-badge-write-link:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 860px) {
+    .google-badge-card {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 28px 24px;
+        gap: 20px;
+    }
+    .google-badge-divider { display: none; }
+    .homie-carousel {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        height: auto;
+        border-radius: 12px;
+        order: -1;
+    }
+    .google-badge-left  { order: 0; }
+    .google-badge-right { order: 1; align-items: center; text-align: center; }
+    .google-badge-btn,
+    .google-badge-write-link { align-self: center; }
+    .google-badge-cta-text { white-space: normal; text-align: center; }
+}
+
+/* =====================
+   FOOTER LOCATION LINK
+   ===================== */
+.your-selector-here {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    background: rgba(255,255,255,0.06);
+    border: 3px solid rgba(255,255,255,0.12);
+    border-radius: 16px;
+    padding: clamp(18px, 3vw, 30px) clamp(20px, 4vw, 40px);
+    margin-bottom: clamp(30px, 5vw, 50px);
+}
+
+.reviews-google-badge {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.google-g-icon {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+}
+
+.reviews-rating-block {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.reviews-score {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: var(--yellow);
+    line-height: 1;
+}
+
+.reviews-stars {
+    display: flex;
+    gap: 2px;
+    font-size: 1.3rem;
+    color: var(--yellow);
+}
+
+.reviews-stars .star-half {
+    opacity: 0.4;
+}
+
+.reviews-count {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.55);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.reviews-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--yellow);
+    color: var(--black);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    padding: 14px 28px;
+    border: 3px solid var(--black);
+    border-radius: 8px;
+    box-shadow: 5px 5px 0px rgba(255,235,59,0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+    white-space: nowrap;
+}
+
+.reviews-cta-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0px rgba(255,235,59,0.4);
+}
+
+/* Reviews grid */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(16px, 2.5vw, 28px);
+}
+
+/* Individual review card */
+.review-card {
+    background: rgba(255,255,255,0.05);
+    border: 3px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: clamp(18px, 2.5vw, 26px);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transition: transform 0.25s, border-color 0.25s, background 0.25s;
+    position: relative;
+    overflow: visible;
+}
+
+.review-card::before {
+    content: '"';
+    position: absolute;
+    top: -14px;
+    left: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 4rem;
+    color: var(--yellow);
+    line-height: 1;
+    pointer-events: none;
+}
+
+.review-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255,235,59,0.4);
+    background: rgba(255,235,59,0.06);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.reviewer-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--white);
+    flex-shrink: 0;
+}
+
+.reviewer-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.reviewer-info strong {
+    font-size: 0.92rem;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.review-stars {
+    font-size: 0.9rem;
+    color: var(--yellow);
+    letter-spacing: 1px;
+}
+
+.review-google-icon {
+    flex-shrink: 0;
+    opacity: 0.7;
+}
+
+.review-text {
+    font-size: clamp(0.82rem, 1.3vw, 0.92rem);
+    line-height: 1.65;
+    color: rgba(255,255,255,0.78);
+    flex: 1;
+}
+
+.review-tag {
+    display: inline-block;
+    background: rgba(255,235,59,0.12);
+    color: var(--yellow);
+    border: 1.5px solid rgba(255,235,59,0.3);
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 12px;
+    align-self: flex-start;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+    .reviews-summary { flex-direction: column; align-items: flex-start; }
+    .reviews-cta-btn { align-self: stretch; justify-content: center; }
+}
+
+@media (max-width: 600px) {
+    .reviews-grid { grid-template-columns: 1fr; }
 }
 
 /* =====================

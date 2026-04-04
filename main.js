@@ -114,3 +114,79 @@
     });
 
 })();
+/* ─── Homie photo carousel (reviews section) ─── */
+(function () {
+    var carousel = document.querySelector('.homie-carousel');
+    if (!carousel) return;
+
+    var track   = carousel.querySelector('.homie-car-track');
+    var slides  = Array.from(track.querySelectorAll('.homie-car-slide'));
+    var dotsEl  = carousel.querySelector('.homie-car-dots');
+    var prev    = carousel.querySelector('.homie-car-prev');
+    var next    = carousel.querySelector('.homie-car-next');
+    var cur     = 0;
+    var autoTimer, progressTimer;
+    var AUTO_DELAY = 3500;
+
+    // Build dots
+    slides.forEach(function (_, i) {
+        var d = document.createElement('button');
+        d.className = 'homie-car-dot' + (i === 0 ? ' active' : '');
+        d.setAttribute('aria-label', 'Photo ' + (i + 1));
+        d.addEventListener('click', function (e) { e.stopPropagation(); goTo(i); resetAuto(); });
+        dotsEl.appendChild(d);
+    });
+
+    // Progress bar
+    var bar = document.createElement('div');
+    bar.className = 'homie-car-progress';
+    carousel.appendChild(bar);
+
+    var dots = Array.from(dotsEl.querySelectorAll('.homie-car-dot'));
+
+    function goTo(idx) {
+        cur = (idx + slides.length) % slides.length;
+        track.style.transform = 'translateX(' + (-cur * 100) + '%)';
+        dots.forEach(function (d, i) { d.classList.toggle('active', i === cur); });
+        prev.disabled = false;
+        next.disabled = false;
+    }
+
+    function startProgress() {
+        bar.style.transition = 'none';
+        bar.style.width = '0%';
+        setTimeout(function () {
+            bar.style.transition = 'width ' + AUTO_DELAY + 'ms linear';
+            bar.style.width = '100%';
+        }, 20);
+    }
+
+    function resetAuto() {
+        clearInterval(autoTimer);
+        startProgress();
+        autoTimer = setInterval(function () {
+            goTo(cur + 1);
+            startProgress();
+        }, AUTO_DELAY);
+    }
+
+    prev.addEventListener('click', function (e) { e.stopPropagation(); goTo(cur - 1); resetAuto(); });
+    next.addEventListener('click', function (e) { e.stopPropagation(); goTo(cur + 1); resetAuto(); });
+
+    // Touch swipe
+    var tx = 0, dragging = false;
+    track.addEventListener('touchstart', function (e) { tx = e.touches[0].clientX; dragging = false; }, { passive: true });
+    track.addEventListener('touchmove',  function (e) { if (Math.abs(e.touches[0].clientX - tx) > 8) dragging = true; }, { passive: true });
+    track.addEventListener('touchend',   function (e) {
+        if (!dragging) return;
+        var diff = tx - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) { goTo(diff > 0 ? cur + 1 : cur - 1); resetAuto(); }
+    });
+
+    // Pause on hover
+    carousel.addEventListener('mouseenter', function () { clearInterval(autoTimer); bar.style.transition = 'none'; });
+    carousel.addEventListener('mouseleave', resetAuto);
+
+    goTo(0);
+    resetAuto();
+})();
