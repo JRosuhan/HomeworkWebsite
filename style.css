@@ -834,7 +834,7 @@ section { padding: clamp(50px, 8vw, 100px) clamp(16px, 6%, 8%); }
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     align-items: stretch;
 }
