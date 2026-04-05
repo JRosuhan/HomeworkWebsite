@@ -9,6 +9,7 @@
     <meta name="description" content="Homework Iloilo — Your official study spot in Jaro, Iloilo City. ₱25/hr WiFi, function rooms, study bundles, and cafe bar. Open Mon–Sat 10AM–9PM.">
     <meta name="keywords" content="study hub Iloilo, study cafe Iloilo, function room Jaro, Homework Iloilo, study spot Iloilo">
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ffeb3b">
     <link rel="canonical" href="https://homeworkiloilo.netlify.app/">
  
     <!-- Open Graph -->
@@ -17,8 +18,15 @@
     <meta property="og:url" content="https://homeworkiloilo.netlify.app/">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://homeworkiloilo.netlify.app/img/perks.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
  
+    <link rel="icon" href="img/logo.png" type="image/png">
+
     <!-- Fonts & Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -49,7 +57,7 @@
  
     <!-- ═══ HERO ═══ -->
     <section class="hero">
-
+ 
         <!-- Left: text panel -->
         <div class="hero-text-panel">
             <div class="title-wrapper">
@@ -58,7 +66,7 @@
             </div>
             <p class="hero-description">A place to study, work, or chill. Charge, connect, be productive. Come, #DoItAtHomeWork.</p>
         </div>
-
+ 
         <!-- Right: hero carousel (reuses homie-carousel JS automatically) -->
         <div class="hero-carousel-panel">
             <div class="homie-carousel hero-carousel">
@@ -86,13 +94,13 @@
                 <h2 class="hero-subtitle">#DoItAtHomeWork</h2>
             </div>
         </div>
-
+ 
     </section>
-
-
+ 
+ 
     <!-- ═══ OFFERS / PERKS ═══ -->
     <section id="offers">
-        <center><h2 class="section-title">THE PERKS</h2></center>
+        <div class="section-title-wrap"><h2 class="section-title">THE PERKS</h2></div>
         <div class="perks-container">
             <div class="featured-perks-img slide-in slide-from-left">
                 <img src="img/perks.jpg" alt="Study Squad">
@@ -125,7 +133,7 @@
                 </div>
                 <div class="sticker-card red-card slide-in slide-from-right delay-3">
                     <div class="deco deco-s2" aria-hidden="true"></div>
-                    <h3 >Free Charging 🔋</h3>
+                    <h3>Free Charging 🔋</h3>
                     <p>Juice up your devices at every single station.</p>
                 </div>
                 <a href="#cafe" class="sticker-card cafe-bar-card slide-in slide-from-right delay-4">
@@ -146,19 +154,19 @@
  
     <!-- ═══ FUNCTION ROOMS ═══ -->
     <section id="rooms" class="spaces-bg">
-        <center><h2 class="section-title">FUNCTION ROOMS</h2></center>
-
+        <div class="section-title-wrap"><h2 class="section-title">FUNCTION ROOMS</h2></div>
+ 
         <div class="rooms-grid">
-
+ 
                     <div class="sticker-card room-card slide-in slide-from-left delay-2">
                         <div class="img-carousel">
                             <button class="img-car-btn img-car-prev" aria-label="Previous image">&#8249;</button>
                             <div class="img-car-track-wrap">
                                 <div class="img-car-track">
-                                    <img src="img/conference.jpg"  alt="Conference Room 1">
-                                    <img src="img/conference2.jpg" alt="Conference Room 2">
-                                    <img src="img/conference3.jpg" alt="Conference Room 3">
-                                    <img src="img/conference4.jpg" alt="Conference Room 4">
+                                    <img loading="lazy" src="img/conference.jpg"  alt="Conference Room 1">
+                                    <img loading="lazy" src="img/conference2.jpg" alt="Conference Room 2">
+                                    <img loading="lazy" src="img/conference3.jpg" alt="Conference Room 3">
+                                    <img loading="lazy" src="img/conference4.jpg" alt="Conference Room 4">
                                 </div>
                             </div>
                             <button class="img-car-btn img-car-next" aria-label="Next image">&#8250;</button>
@@ -179,18 +187,18 @@
                             <div class="price-tag academic-rate">Academic: &#x20B1;180/HR</div>
                             <div class="price-tag corporate-rate">Corporate: &#x20B1;250/HR</div>
                         </div>
-                        <a class="book-now-btn" href="https://www.facebook.com/HomeWorkIloilo/" target="_blank" rel="noopener"><i class="fab fa-facebook-messenger"></i> BOOK NOW</a>
+                        <a class="book-now-btn" href="https://www.facebook.com/HomeWorkIloilo/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-messenger"></i> BOOK NOW</a>
                     </div>
-
+ 
                     <div class="sticker-card room-card slide-in slide-from-right delay-2" data-index="1">
                         <div class="img-carousel">
                             <button class="img-car-btn img-car-prev" aria-label="Previous image">&#8249;</button>
                             <div class="img-car-track-wrap">
                                 <div class="img-car-track">
-                                    <img src="img/office.jpg"  alt="The Office 1">
-                                    <img src="img/office2.jpg" alt="The Office 2">
-                                    <img src="img/office3.jpg" alt="The Office 3">
-                                    <img src="img/office4.jpg" alt="The Office 4">
+                                    <img loading="lazy" src="img/office.jpg"  alt="The Office 1">
+                                    <img loading="lazy" src="img/office2.jpg" alt="The Office 2">
+                                    <img loading="lazy" src="img/office3.jpg" alt="The Office 3">
+                                    <img loading="lazy" src="img/office4.jpg" alt="The Office 4">
                                 </div>
                             </div>
                             <button class="img-car-btn img-car-next" aria-label="Next image">&#8250;</button>
@@ -210,18 +218,18 @@
                             <div class="price-tag academic-rate">Academic: &#x20B1;180/HR</div>
                             <div class="price-tag corporate-rate">Corporate: &#x20B1;250/HR</div>
                         </div>
-                        <a class="book-now-btn" href="https://www.facebook.com/HomeWorkIloilo/" target="_blank" rel="noopener"><i class="fab fa-facebook-messenger"></i> BOOK NOW</a>
+                        <a class="book-now-btn" href="https://www.facebook.com/HomeWorkIloilo/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-messenger"></i> BOOK NOW</a>
                     </div>
-
+ 
                     <div class="sticker-card room-card slide-in slide-from-left delay-2" data-index="2">
                         <div class="img-carousel">
                             <button class="img-car-btn img-car-prev" aria-label="Previous image">&#8249;</button>
                             <div class="img-car-track-wrap">
                                 <div class="img-car-track">
-                                    <img src="img/backyard.jpg"  alt="Backyard 1">
-                                    <img src="img/backyard2.jpg" alt="Backyard 2">
-                                    <img src="img/backyard3.jpg" alt="Backyard 3">
-                                    <img src="img/backyard4.jpg" alt="Backyard 4">
+                                    <img loading="lazy" src="img/backyard.jpg"  alt="Backyard 1">
+                                    <img loading="lazy" src="img/backyard2.jpg" alt="Backyard 2">
+                                    <img loading="lazy" src="img/backyard3.jpg" alt="Backyard 3">
+                                    <img loading="lazy" src="img/backyard4.jpg" alt="Backyard 4">
                                 </div>
                             </div>
                             <button class="img-car-btn img-car-next" aria-label="Next image">&#8250;</button>
@@ -242,18 +250,18 @@
                             <div class="price-tag academic-rate">Academic: &#x20B1;180/HR</div>
                             <div class="price-tag corporate-rate">Corporate: &#x20B1;250/HR</div>
                         </div>
-                        <a class="book-now-btn" href="https://www.facebook.com/HomeWorkIloilo/" target="_blank" rel="noopener"><i class="fab fa-facebook-messenger"></i> BOOK NOW</a>
+                        <a class="book-now-btn" href="https://www.facebook.com/HomeWorkIloilo/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-messenger"></i> BOOK NOW</a>
                     </div>
-
+ 
                     <div class="sticker-card room-card slide-in slide-from-left delay-2" data-index="3">
                         <div class="img-carousel">
                             <button class="img-car-btn img-car-prev" aria-label="Previous image">&#8249;</button>
                             <div class="img-car-track-wrap">
                                 <div class="img-car-track">
-                                    <img src="img/mainhall.jpg"  alt="Main Hall 1">
-                                    <img src="img/mainhall2.jpg" alt="Main Hall 2">
-                                    <img src="img/mainhall3.jpg" alt="Main Hall 3">
-                                    <img src="img/mainhall4.jpg" alt="Main Hall 4">
+                                    <img loading="lazy" src="img/mainhall.jpg"  alt="Main Hall 1">
+                                    <img loading="lazy" src="img/mainhall2.jpg" alt="Main Hall 2">
+                                    <img loading="lazy" src="img/mainhall3.jpg" alt="Main Hall 3">
+                                    <img loading="lazy" src="img/mainhall4.jpg" alt="Main Hall 4">
                                 </div>
                             </div>
                             <button class="img-car-btn img-car-next" aria-label="Next image">&#8250;</button>
@@ -273,50 +281,50 @@
                             <div class="price-tag academic-rate">Academic: &#x20B1;500/HR</div>
                             <div class="price-tag corporate-rate">Corporate: &#x20B1;750/HR</div>
                         </div>
-                        <a class="book-now-btn" href="https://www.facebook.com/HomeWorkIloilo/" target="_blank" rel="noopener"><i class="fab fa-facebook-messenger"></i> BOOK NOW</a>
+                        <a class="book-now-btn" href="https://www.facebook.com/HomeWorkIloilo/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-messenger"></i> BOOK NOW</a>
                     </div>
-
+ 
         </div><!-- /.rooms-grid -->
-
+ 
     </section>
     <!-- ═══ CAFE BAR ═══ -->
     <section id="cafe" class="cafe-section">
-        <center><img src="img/cafe.png" alt="CAFE BAR" class="cafe-title-img"></center>
+        <div class="section-title-wrap"><img src="img/cafe.png" alt="CAFE BAR" class="cafe-title-img"></div>
         <p class="cafe-tagline slide-in slide-from-bottom">Fuel your grind. Sip, study, repeat.</p>
-
+ 
         <div class="cafe-gallery">
             <div class="cafe-gallery-main slide-in slide-from-left">
-                <img src="img/cafe1.png" alt="Cafe Bar drinks">
+                <img loading="lazy" src="img/cafe1.png" alt="Cafe Bar drinks">
                 <div class="cafe-img-label">THE SPOT</div>
             </div>
             <div class="cafe-gallery-grid">
                 <div class="cafe-gallery-item slide-in slide-from-right delay-1">
-                    <img src="img/cafe2.jpg" alt="Coffee drinks">
+                    <img loading="lazy" src="img/cafe2.jpg" alt="Coffee drinks">
                     <div class="cafe-img-label">SIPS</div>
                 </div>
                 <div class="cafe-gallery-item slide-in slide-from-right delay-2">
-                    <img src="img/cafe3.jpg" alt="Cafe snacks">
+                    <img loading="lazy" src="img/cafe3.jpg" alt="Cafe snacks">
                     <div class="cafe-img-label">DRIP</div>
                 </div>
                 <div class="cafe-gallery-item slide-in slide-from-right delay-3">
-                    <img src="img/cafe4.jpg" alt="Study drinks">
+                    <img loading="lazy" src="img/cafe4.jpg" alt="Study drinks">
                     <div class="cafe-img-label">BREWS</div>
                 </div>
                 <div class="cafe-gallery-item slide-in slide-from-right delay-4">
-                    <img src="img/cafe5.jpg" alt="Cafe vibes">
+                    <img loading="lazy" src="img/cafe5.jpg" alt="Cafe vibes">
                     <div class="cafe-img-label">VIBES</div>
                 </div>
             </div>
         </div>
-
+ 
         <div class="cafe-cta slide-in slide-from-bottom">
             <p>Corkage applies for outside drinks. See <a href="#terms">Terms &amp; Conditions</a> for details.</p>
         </div>
     </section>
-
+ 
     <!-- ═══ STUDY BUNDLES ═══ -->
     <section id="bundles">
-        <center><h2 class="section-title">STUDY BUNDLES</h2></center>
+        <div class="section-title-wrap"><h2 class="section-title">STUDY BUNDLES</h2></div>
         <div class="sticker-grid">
  
             <div class="sticker-card slide-in slide-from-left delay-1">
@@ -348,13 +356,13 @@
                 <p>The ultimate academic investment. 30 days of unlimited access. Best for board exam reviewees and thesis students requiring a daily professional environment.</p>
                 <div class="price-tag">₱3,000</div>
             </div>
-
+ 
         </div>
     </section>
-
+ 
     <!-- ═══ TERMS & CONDITIONS ═══ -->
     <section id="terms" class="terms-bg">
-        <center><h2 class="section-title">TERMS AND CONDITIONS</h2></center>
+        <div class="section-title-wrap"><h2 class="section-title">TERMS AND CONDITIONS</h2></div>
         <div class="terms-container">
  
             <!-- Row 1 -->
@@ -411,7 +419,7 @@
                 <div>
                     <strong>Amenities</strong>
                     <p>Amenities are free to use but require a deposit. The borrower is liable for any damages. Deposits are returned at the end of the booking.</p>
-                    <ul class="amenities-list" style="margin-top:10px;">
+                    <ul class="amenities-list amenities-list--spaced">
                         <li><i class="fas fa-plug"></i> Extension Cord — Free deposit</li>
                         <li><i class="fas fa-marker"></i> Whiteboard and Markers — ₱50 deposit</li>
                         <li><i class="fas fa-video"></i> Projector — 1 valid ID</li>
@@ -432,35 +440,35 @@
     </section>
 <!-- ═══ REVIEWS ═══ -->
     <section id="reviews" class="reviews-bg">
-        <center><h2 class="section-title">HOMIE REVIEWS</h2></center>
-
+        <div class="section-title-wrap"><h2 class="section-title">HOMIE REVIEWS</h2></div>
+ 
         <div class="google-badge-wrap slide-in slide-from-bottom">
             <div class="google-badge-card">
-
+ 
                 <!-- ── Customer photo carousel ── -->
                 <div class="homie-carousel">
                     <div class="homie-car-track-wrap">
                         <div class="homie-car-track">
                             <!-- REPLACE src with your actual images e.g. src="img/homie1.jpg" -->
-                            <div class="homie-car-slide"><img src="img/homie1.jpg" alt="Homie 1"></div>
-                            <div class="homie-car-slide"><img src="img/homie2.jpg" alt="Homie 2"></div>
-                            <div class="homie-car-slide"><img src="img/homie3.jpg" alt="Homie 3"></div>
-                            <div class="homie-car-slide"><img src="img/homie4.jpg" alt="Homie 4"></div>
-                            <div class="homie-car-slide"><img src="img/homie5.jpg" alt="Homie 5"></div>
-                            <div class="homie-car-slide"><img src="img/homie6.jpg" alt="Homie 6"></div>
-                            <div class="homie-car-slide"><img src="img/homie7.jpg" alt="Homie 7"></div>
-                            <div class="homie-car-slide"><img src="img/homie8.jpg" alt="Homie 8"></div>
-                            <div class="homie-car-slide"><img src="img/homie9.jpg" alt="Homie 9"></div>
-                            <div class="homie-car-slide"><img src="img/homie10.jpg" alt="Homie 10"></div>
+                            <div class="homie-car-slide"><img loading="lazy" src="img/homie1.jpg" alt="Homie 1"></div>
+                            <div class="homie-car-slide"><img loading="lazy" src="img/homie2.jpg" alt="Homie 2"></div>
+                            <div class="homie-car-slide"><img loading="lazy" src="img/homie3.jpg" alt="Homie 3"></div>
+                            <div class="homie-car-slide"><img loading="lazy" src="img/homie4.jpg" alt="Homie 4"></div>
+                            <div class="homie-car-slide"><img loading="lazy" src="img/homie5.jpg" alt="Homie 5"></div>
+                            <div class="homie-car-slide"><img loading="lazy" src="img/homie6.jpg" alt="Homie 6"></div>
+                            <div class="homie-car-slide"><img loading="lazy" src="img/homie7.jpg" alt="Homie 7"></div>
+                            <div class="homie-car-slide"><img loading="lazy" src="img/homie8.jpg" alt="Homie 8"></div>
+                            <div class="homie-car-slide"><img loading="lazy" src="img/homie9.jpg" alt="Homie 9"></div>
+                            <div class="homie-car-slide"><img loading="lazy" src="img/homie10.jpg" alt="Homie 10"></div>
                         </div>
                     </div>
                     <button class="homie-car-btn homie-car-prev" aria-label="Previous photo">&#8249;</button>
                     <button class="homie-car-btn homie-car-next" aria-label="Next photo">&#8250;</button>
                     <div class="homie-car-dots"></div>
                 </div>
-
+ 
                 <div class="google-badge-divider"></div>
-
+ 
                 <!-- Left: branding + score -->
                 <div class="google-badge-left">
                     <svg class="google-full-logo" viewBox="0 0 74 24" xmlns="http://www.w3.org/2000/svg" aria-label="Google">
@@ -473,31 +481,31 @@
                     </svg>
                     <p class="google-badge-label">Reviews</p>
                     <div class="google-badge-score">4.9</div>
-                    <div class="google-badge-stars" aria-label="4.8 out of 5 stars">★★★★<span class="star-dim">★</span></div>
+                    <div class="google-badge-stars" aria-label="4.9 out of 5 stars">★★★★<span class="star-dim">★</span></div>
                     <p class="google-badge-sub">HomeWork Study Hub</p>
                 </div>
-
+ 
                 <div class="google-badge-divider"></div>
-
+ 
                 <!-- Right: CTA -->
                 <div class="google-badge-right">
                     <p class="google-badge-cta-text">Loved your visit?<br>Share it with the world.</p>
                     <a href="https://www.google.com/maps/place/HomeWork+Study+Hub/@10.729347,122.553463,15z/data=!4m6!3m5!1s0x33aee5e96a24ce03:0xbc8b4c8725fcbc70!8m2!3d10.7293473!4d122.5534631!16s%2Fg%2F11f66gd163"
-                        target="_blank" rel="noopener" class="google-badge-btn">
+                        target="_blank" rel="noopener noreferrer" class="google-badge-btn">
                         <svg viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
                         See us on Google
                     </a>
                     <a href="https://www.google.com/maps/place/HomeWork+Study+Hub/@10.729347,122.553463,15z/data=!4m6!3m5!1s0x33aee5e96a24ce03:0xbc8b4c8725fcbc70!8m2!3d10.7293473!4d122.5534631!16s%2Fg%2F11f66gd163"
-                        target="_blank" rel="noopener" class="google-badge-write-link">
+                        target="_blank" rel="noopener noreferrer" class="google-badge-write-link">
                         Write a review <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
-
+ 
             </div>
         </div>
     </section>
-
-
+ 
+ 
 <!-- ═══ FOOTER ═══ -->
     <footer>
         <div class="footer-content">
@@ -505,8 +513,8 @@
                 <h4>HOMEWORK</h4>
                 <p>Established 2017. <br> Official Study Spot.<br>Certified Homie Hub.</p>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/HomeWorkIloilo/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fhomeworkiloilo%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExd0xMU0lTN1FqRzJleGxLQXNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5dhDBUq_zTyPdiiBq83I8Eal4U5dS6NkTHQDiX03SYm84m0r1-dPytd-pLtw_aem_F7nNID6z_lnp5fN1FoVG3g&h=AT4GGbKsEVb_wd70cAN4fgcZb47mQZWkNvbamIRa50je38TyrqMmKr4pdTZYi5fDBW7vTzMg--Hhm6A4AZ_lADqgeXMbgK4M3LzJwEJu4VPpPC9Jw1wwT4UJCiZVHGQucFS0" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/HomeWorkIloilo/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/homeworkiloilo" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <div class="footer-section">
@@ -526,11 +534,11 @@
             <div class="footer-section footer-findus-map">
                 <div class="footer-findus-info">
                     <h4>Find Us</h4>
-                    <a href="https://maps.app.goo.gl/USsDfB7hYmpHbqWg9" target="_blank" rel="noopener" class="location-link">
+                    <a href="https://maps.app.goo.gl/USsDfB7hYmpHbqWg9" target="_blank" rel="noopener noreferrer" class="location-link">
                         <i class="fas fa-map-marker-alt"></i> Lopez Jaena St, Jaro, <br> Iloilo City, Philippines
                     </a>
-                    <p style="margin-top:4px;"><i class="fas fa-phone"></i> (033) 501 0381</p>
-                    <p style="margin-top:px;"><i class="fas fa-envelope"></i> homeworkstudyhub@gmail.com</p>
+                    <p class="footer-contact-item"><i class="fas fa-phone"></i> (033) 501 0381</p>
+                    <p class="footer-contact-item"><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="85edeae8e0f2eaf7eef6f1f0e1fcedf0e7c5e2e8e4ece9abe6eae8">[email&#160;protected]</a></p>
                 </div>
                 <div class="footer-map-col">
                     <iframe
@@ -545,13 +553,13 @@
                 </div>
             </div>
         </div>
-        </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 HOMEWORK. All rights reserved.</p>
+            <p>&copy; <span id="copy-year"></span> HOMEWORK. All rights reserved.</p>
         </div>
     </footer>
 
     <script src="main.js"></script>
+    <script>document.getElementById("copy-year").textContent = new Date().getFullYear();</script>
 
 </body>
 </html>

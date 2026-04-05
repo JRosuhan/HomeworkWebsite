@@ -118,7 +118,7 @@
     var prev    = carousel.querySelector('.homie-car-prev');
     var next    = carousel.querySelector('.homie-car-next');
     var cur     = 0;
-    var autoTimer, progressTimer;
+    var autoTimer;
     var AUTO_DELAY = 3500;
 
     // Build dots

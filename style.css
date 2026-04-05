@@ -37,7 +37,6 @@ img { max-width: 100%; display: block; }
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
-    scroll-snap-type: y mandatory;
 }
 
 .site-header {
@@ -543,11 +542,11 @@ section { padding: clamp(50px, 8vw, 100px) clamp(16px, 6%, 8%); }
 }
 
 .section-title {
+    display: inline-block;
     font-family: 'Archivo Black', sans-serif;
     font-size: clamp(1.6rem, 5vw, 3rem);
     background: var(--red);
     color: var(--white);
-    display: inline-block;
     padding: 8px 24px;
     margin-bottom: clamp(30px, 5vw, 60px);
     transform: skew(-10deg);
@@ -1253,7 +1252,8 @@ footer {
 
     .sub-badge { display: none; }
 
-    .section-title { font-size: 1.4rem; padding: 6px 16px; box-shadow: 5px 5px 0px var(--red); }
+    .section-title {
+    text-align: center; font-size: 1.4rem; padding: 6px 16px; box-shadow: 5px 5px 0px var(--red); }
 
     .featured-perks-img img { height: 220px; }
 
@@ -1974,4 +1974,25 @@ footer {
     transform: scale(1.2);
     width: 18px;
     border-radius: 5px;
+}
+/* =====================
+   FOOTER CONTACT ITEMS
+   ===================== */
+.footer-contact-item {
+    margin-top: 4px;
+}
+
+/* =====================
+   AMENITIES LIST SPACED
+   ===================== */
+.amenities-list--spaced {
+    margin-top: 10px;
+}
+
+/* =====================
+   SECTION TITLE WRAPPER
+   ===================== */
+.section-title-wrap {
+    text-align: center;
+    width: 100%;
 }
