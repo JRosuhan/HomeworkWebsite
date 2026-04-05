@@ -17,11 +17,16 @@
     <meta property="og:description" content="Your official study spot in Jaro, Iloilo City. ₱25/hr, fiber WiFi, function rooms & cafe bar.">
     <meta property="og:url" content="https://jrosuhan.github.io/HomeworkWebsite/">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://jrosuhan.github.io/HomeworkWebsite/img/logo.png">
+    <meta property="og:image" content="https://jrosuhan.github.io/HomeworkWebsite/img/perks.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
  
-    <link rel="icon" href="img/logo.png" type="image/png">
+    <!-- WebP for Chromium browsers (Brave, Chrome, Edge) -->
+    <link rel="icon" href="img/favicon-192.webp" type="image/webp" sizes="192x192">
+    <!-- PNG fallback for Firefox and Safari -->
+    <link rel="icon" href="img/favicon-192.png" type="image/png" sizes="192x192">
+    <!-- Apple devices home screen -->
+    <link rel="apple-touch-icon" href="img/favicon-180.png">
 
     <!-- Fonts & Styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,13 +35,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "HomeWork Study Hub",
+      "image": "https://jrosuhan.github.io/HomeworkWebsite/img/perks.webp",
+      "url": "https://jrosuhan.github.io/HomeworkWebsite/",
+      "telephone": "(033) 501 0381",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lopez Jaena St",
+        "addressLocality": "Jaro",
+        "addressRegion": "Iloilo City",
+        "addressCountry": "PH"
+      },
+      "openingHours": ["Mo-Sa 10:00-21:00", "Su 12:00-21:00"],
+      "priceRange": "₱",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5"
+      },
+      "sameAs": [
+        "https://www.facebook.com/HomeWorkIloilo/",
+        "https://www.instagram.com/homeworkiloilo"
+      ]
+    }
+    </script>
 </head>
 <body>
  
     <!-- ═══ UNIFIED HEADER BAR ═══ -->
     <header class="site-header">
         <div class="header-inner">
-            <a href="#" class="main-logo-link"><img src="img/logo.png" alt="Homework Iloilo" class="main-logo-img"></a>
+            <a href="#" class="main-logo-link"><img src="img/logo.webp" alt="Homework Iloilo" class="main-logo-img"></a>
  
             <!-- Hamburger (mobile only) -->
             <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -61,7 +96,7 @@
         <!-- Left: text panel -->
         <div class="hero-text-panel">
             <div class="title-wrapper">
-                <img src="img/homework-title.png" alt="HOMEWORK" class="certified-title-img">
+                <img src="img/homework-title.webp" alt="HOMEWORK" class="certified-title-img" fetchpriority="high">
                 <span class="sub-badge">Certified Homie</span>
             </div>
             <p class="hero-description">A place to study, work, or chill. Charge, connect, be productive. Come, #DoItAtHomeWork.</p>
@@ -76,16 +111,16 @@
                 </svg>
                 <div class="homie-car-track-wrap">
                     <div class="homie-car-track">
-                        <div class="homie-car-slide"><img src="img/hero1.jpg" alt="HomeWork Homie 1"></div>
-                        <div class="homie-car-slide"><img src="img/hero2.jpg" alt="HomeWork Homie 2"></div>
-                        <div class="homie-car-slide"><img src="img/hero3.jpg" alt="HomeWork Homie 3"></div>
-                        <div class="homie-car-slide"><img src="img/hero4.jpg" alt="HomeWork Homie 4"></div>
-                        <div class="homie-car-slide"><img src="img/hero5.jpg" alt="HomeWork Homie 5"></div>
-                        <div class="homie-car-slide"><img src="img/hero6.jpg" alt="HomeWork Homie 6"></div>
-                        <div class="homie-car-slide"><img src="img/hero7.jpg" alt="HomeWork Homie 7"></div>
-                        <div class="homie-car-slide"><img src="img/hero8.jpg" alt="HomeWork Homie 8"></div>
-                        <div class="homie-car-slide"><img src="img/hero9.jpg" alt="HomeWork Homie 9"></div>
-                        <div class="homie-car-slide"><img src="img/hero10.jpg" alt="HomeWork Homie 10"></div>
+                        <div class="homie-car-slide"><img src="img/hero1.webp" alt="HomeWork Homie 1" fetchpriority="high"></div>
+                        <div class="homie-car-slide"><img src="img/hero2.webp" alt="HomeWork Homie 2" loading="lazy"></div>
+                        <div class="homie-car-slide"><img src="img/hero3.webp" alt="HomeWork Homie 3" loading="lazy"></div>
+                        <div class="homie-car-slide"><img src="img/hero4.webp" alt="HomeWork Homie 4" loading="lazy"></div>
+                        <div class="homie-car-slide"><img src="img/hero5.webp" alt="HomeWork Homie 5" loading="lazy"></div>
+                        <div class="homie-car-slide"><img src="img/hero6.webp" alt="HomeWork Homie 6" loading="lazy"></div>
+                        <div class="homie-car-slide"><img src="img/hero7.webp" alt="HomeWork Homie 7" loading="lazy"></div>
+                        <div class="homie-car-slide"><img src="img/hero8.webp" alt="HomeWork Homie 8" loading="lazy"></div>
+                        <div class="homie-car-slide"><img src="img/hero9.webp" alt="HomeWork Homie 9" loading="lazy"></div>
+                        <div class="homie-car-slide"><img src="img/hero10.webp" alt="HomeWork Homie 10" loading="lazy"></div>
                     </div>
                 </div>
                 <button class="homie-car-btn homie-car-prev" aria-label="Previous photo">&#8249;</button>
@@ -103,7 +138,7 @@
         <div class="section-title-wrap"><h2 class="section-title">THE PERKS</h2></div>
         <div class="perks-container">
             <div class="featured-perks-img slide-in slide-from-left">
-                <img src="img/perks.jpg" alt="Study Squad">
+                <img src="img/perks.webp" alt="Study Squad" loading="lazy">
                 <div class="img-caption-tag">STUDY SQUAD GOALS</div>
                 <!-- Lightbulb deco — top-right of featured image -->
                 <svg class="deco deco-bulb" aria-hidden="true" viewBox="0 0 60 90" xmlns="http://www.w3.org/2000/svg">
@@ -163,10 +198,10 @@
                             <button class="img-car-btn img-car-prev" aria-label="Previous image">&#8249;</button>
                             <div class="img-car-track-wrap">
                                 <div class="img-car-track">
-                                    <img loading="lazy" src="img/conference.jpg"  alt="Conference Room 1">
-                                    <img loading="lazy" src="img/conference2.jpg" alt="Conference Room 2">
-                                    <img loading="lazy" src="img/conference3.jpg" alt="Conference Room 3">
-                                    <img loading="lazy" src="img/conference4.jpg" alt="Conference Room 4">
+                                    <img loading="lazy" src="img/conference.webp"  alt="Conference Room 1">
+                                    <img loading="lazy" src="img/conference2.webp" alt="Conference Room 2">
+                                    <img loading="lazy" src="img/conference3.webp" alt="Conference Room 3">
+                                    <img loading="lazy" src="img/conference4.webp" alt="Conference Room 4">
                                 </div>
                             </div>
                             <button class="img-car-btn img-car-next" aria-label="Next image">&#8250;</button>
@@ -195,10 +230,10 @@
                             <button class="img-car-btn img-car-prev" aria-label="Previous image">&#8249;</button>
                             <div class="img-car-track-wrap">
                                 <div class="img-car-track">
-                                    <img loading="lazy" src="img/office.jpg"  alt="The Office 1">
-                                    <img loading="lazy" src="img/office2.jpg" alt="The Office 2">
-                                    <img loading="lazy" src="img/office3.jpg" alt="The Office 3">
-                                    <img loading="lazy" src="img/office4.jpg" alt="The Office 4">
+                                    <img loading="lazy" src="img/office.webp"  alt="The Office 1">
+                                    <img loading="lazy" src="img/office2.webp" alt="The Office 2">
+                                    <img loading="lazy" src="img/office3.webp" alt="The Office 3">
+                                    <img loading="lazy" src="img/office4.webp" alt="The Office 4">
                                 </div>
                             </div>
                             <button class="img-car-btn img-car-next" aria-label="Next image">&#8250;</button>
@@ -226,10 +261,10 @@
                             <button class="img-car-btn img-car-prev" aria-label="Previous image">&#8249;</button>
                             <div class="img-car-track-wrap">
                                 <div class="img-car-track">
-                                    <img loading="lazy" src="img/backyard.jpg"  alt="Backyard 1">
-                                    <img loading="lazy" src="img/backyard2.jpg" alt="Backyard 2">
-                                    <img loading="lazy" src="img/backyard3.jpg" alt="Backyard 3">
-                                    <img loading="lazy" src="img/backyard4.jpg" alt="Backyard 4">
+                                    <img loading="lazy" src="img/backyard.webp"  alt="Backyard 1">
+                                    <img loading="lazy" src="img/backyard2.webp" alt="Backyard 2">
+                                    <img loading="lazy" src="img/backyard3.webp" alt="Backyard 3">
+                                    <img loading="lazy" src="img/backyard4.webp" alt="Backyard 4">
                                 </div>
                             </div>
                             <button class="img-car-btn img-car-next" aria-label="Next image">&#8250;</button>
@@ -258,10 +293,10 @@
                             <button class="img-car-btn img-car-prev" aria-label="Previous image">&#8249;</button>
                             <div class="img-car-track-wrap">
                                 <div class="img-car-track">
-                                    <img loading="lazy" src="img/mainhall.jpg"  alt="Main Hall 1">
-                                    <img loading="lazy" src="img/mainhall2.jpg" alt="Main Hall 2">
-                                    <img loading="lazy" src="img/mainhall3.jpg" alt="Main Hall 3">
-                                    <img loading="lazy" src="img/mainhall4.jpg" alt="Main Hall 4">
+                                    <img loading="lazy" src="img/mainhall.webp"  alt="Main Hall 1">
+                                    <img loading="lazy" src="img/mainhall2.webp" alt="Main Hall 2">
+                                    <img loading="lazy" src="img/mainhall3.webp" alt="Main Hall 3">
+                                    <img loading="lazy" src="img/mainhall4.webp" alt="Main Hall 4">
                                 </div>
                             </div>
                             <button class="img-car-btn img-car-next" aria-label="Next image">&#8250;</button>
@@ -289,29 +324,29 @@
     </section>
     <!-- ═══ CAFE BAR ═══ -->
     <section id="cafe" class="cafe-section">
-        <div class="section-title-wrap"><img src="img/cafe.png" alt="CAFE BAR" class="cafe-title-img"></div>
+        <div class="section-title-wrap"><img src="img/cafe.webp" alt="CAFE BAR" class="cafe-title-img"></div>
         <p class="cafe-tagline slide-in slide-from-bottom">Fuel your grind. Sip, study, repeat.</p>
  
         <div class="cafe-gallery">
             <div class="cafe-gallery-main slide-in slide-from-left">
-                <img loading="lazy" src="img/cafe1.png" alt="Cafe Bar drinks">
+                <img loading="lazy" src="img/cafe1.webp" alt="Cafe Bar drinks">
                 <div class="cafe-img-label">THE SPOT</div>
             </div>
             <div class="cafe-gallery-grid">
                 <div class="cafe-gallery-item slide-in slide-from-right delay-1">
-                    <img loading="lazy" src="img/cafe2.jpg" alt="Coffee drinks">
+                    <img loading="lazy" src="img/cafe2.webp" alt="Coffee drinks">
                     <div class="cafe-img-label">SIPS</div>
                 </div>
                 <div class="cafe-gallery-item slide-in slide-from-right delay-2">
-                    <img loading="lazy" src="img/cafe3.jpg" alt="Cafe snacks">
+                    <img loading="lazy" src="img/cafe3.webp" alt="Cafe snacks">
                     <div class="cafe-img-label">DRIP</div>
                 </div>
                 <div class="cafe-gallery-item slide-in slide-from-right delay-3">
-                    <img loading="lazy" src="img/cafe4.jpg" alt="Study drinks">
+                    <img loading="lazy" src="img/cafe4.webp" alt="Study drinks">
                     <div class="cafe-img-label">BREWS</div>
                 </div>
                 <div class="cafe-gallery-item slide-in slide-from-right delay-4">
-                    <img loading="lazy" src="img/cafe5.jpg" alt="Cafe vibes">
+                    <img loading="lazy" src="img/cafe5.webp" alt="Cafe vibes">
                     <div class="cafe-img-label">VIBES</div>
                 </div>
             </div>
@@ -449,17 +484,16 @@
                 <div class="homie-carousel">
                     <div class="homie-car-track-wrap">
                         <div class="homie-car-track">
-                            <!-- REPLACE src with your actual images e.g. src="img/homie1.jpg" -->
-                            <div class="homie-car-slide"><img loading="lazy" src="img/homie1.jpg" alt="Homie 1"></div>
-                            <div class="homie-car-slide"><img loading="lazy" src="img/homie2.jpg" alt="Homie 2"></div>
-                            <div class="homie-car-slide"><img loading="lazy" src="img/homie3.jpg" alt="Homie 3"></div>
-                            <div class="homie-car-slide"><img loading="lazy" src="img/homie4.jpg" alt="Homie 4"></div>
-                            <div class="homie-car-slide"><img loading="lazy" src="img/homie5.jpg" alt="Homie 5"></div>
-                            <div class="homie-car-slide"><img loading="lazy" src="img/homie6.jpg" alt="Homie 6"></div>
-                            <div class="homie-car-slide"><img loading="lazy" src="img/homie7.jpg" alt="Homie 7"></div>
-                            <div class="homie-car-slide"><img loading="lazy" src="img/homie8.jpg" alt="Homie 8"></div>
-                            <div class="homie-car-slide"><img loading="lazy" src="img/homie9.jpg" alt="Homie 9"></div>
-                            <div class="homie-car-slide"><img loading="lazy" src="img/homie10.jpg" alt="Homie 10"></div>
+                            <div class="homie-car-slide"><img loading="lazy" src="img/homie1.webp" alt="Homie 1"></div>
+                            <div class="homie-car-slide"><img loading="lazy" src="img/homie2.webp" alt="Homie 2"></div>
+                            <div class="homie-car-slide"><img loading="lazy" src="img/homie3.webp" alt="Homie 3"></div>
+                            <div class="homie-car-slide"><img loading="lazy" src="img/homie4.webp" alt="Homie 4"></div>
+                            <div class="homie-car-slide"><img loading="lazy" src="img/homie5.webp" alt="Homie 5"></div>
+                            <div class="homie-car-slide"><img loading="lazy" src="img/homie6.webp" alt="Homie 6"></div>
+                            <div class="homie-car-slide"><img loading="lazy" src="img/homie7.webp" alt="Homie 7"></div>
+                            <div class="homie-car-slide"><img loading="lazy" src="img/homie8.webp" alt="Homie 8"></div>
+                            <div class="homie-car-slide"><img loading="lazy" src="img/homie9.webp" alt="Homie 9"></div>
+                            <div class="homie-car-slide"><img loading="lazy" src="img/homie10.webp" alt="Homie 10"></div>
                         </div>
                     </div>
                     <button class="homie-car-btn homie-car-prev" aria-label="Previous photo">&#8249;</button>
@@ -558,7 +592,7 @@
         </div>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
     <script>document.getElementById("copy-year").textContent = new Date().getFullYear();</script>
 
 </body>

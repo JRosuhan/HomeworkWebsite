@@ -468,7 +468,7 @@ section { padding: clamp(50px, 8vw, 100px) clamp(16px, 6%, 8%); }
 
 
 .cafe-bar-card {
-    background-image: url('img/cafe.png') !important;
+    background-image: url('img/cafe.webp') !important;
     background-size: calc(100% - 24px) auto !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
@@ -1650,21 +1650,7 @@ footer {
     .google-badge-cta-text { white-space: normal; text-align: center; }
 }
 
-/* =====================
-   FOOTER LOCATION LINK
-   ===================== */
-.your-selector-here {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-    background: rgba(255,255,255,0.06);
-    border: 3px solid rgba(255,255,255,0.12);
-    border-radius: 16px;
-    padding: clamp(18px, 3vw, 30px) clamp(20px, 4vw, 40px);
-    margin-bottom: clamp(30px, 5vw, 50px);
-}
+
 
 .reviews-google-badge {
     display: flex;
