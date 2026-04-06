@@ -1969,38 +1969,17 @@ footer {
     transform: none;
     z-index: 9999;
     pointer-events: none;
-    opacity: 1;
+    opacity: 0;
     white-space: nowrap;
     transition: opacity 0.6s ease;
 }
 
+.swipe-hint-bubble.bubble-show {
+    opacity: 1;
+}
+
 .swipe-hint-bubble.bubble-hide {
     opacity: 0;
-}
-
-/* Tail dot pointing down toward the arrow */
-.swipe-hint-bubble-body::before {
-    content: '';
-    position: absolute;
-    bottom: -11px;
-    right: 10px;
-    width: 8px;
-    height: 8px;
-    background: var(--yellow);
-    border: 2px solid var(--black);
-    border-radius: 50%;
-}
-
-.swipe-hint-bubble-body::after {
-    content: '';
-    position: absolute;
-    bottom: -21px;
-    right: 6px;
-    width: 5px;
-    height: 5px;
-    background: var(--yellow);
-    border: 2px solid var(--black);
-    border-radius: 50%;
 }
 
 .swipe-hint-bubble-body {
@@ -2019,12 +1998,12 @@ footer {
     position: relative;
 }
 
-/* Large tail dot — bottom-right corner, stepping toward the arrow */
+/* Tail dot — large */
 .swipe-hint-bubble-body::before {
     content: '';
     position: absolute;
     bottom: -11px;
-    right: 2px;
+    right: 10px;
     width: 8px;
     height: 8px;
     background: var(--yellow);
@@ -2032,18 +2011,19 @@ footer {
     border-radius: 50%;
 }
 
-/* Small tail dot — further down-right toward the arrow center */
+/* Tail dot — small */
 .swipe-hint-bubble-body::after {
     content: '';
     position: absolute;
-    bottom: -22px;
-    right: -6px;
+    bottom: -21px;
+    right: 6px;
     width: 5px;
     height: 5px;
     background: var(--yellow);
     border: 2px solid var(--black);
     border-radius: 50%;
 }
+
 
 /* =====================
    FOOTER CONTACT ITEMS

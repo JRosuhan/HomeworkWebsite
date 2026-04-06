@@ -112,10 +112,37 @@
             bubble.className = 'swipe-hint-bubble';
             bubble.innerHTML = '<div class="swipe-hint-bubble-body">Click to see more</div>';
             next.appendChild(bubble);
-            setTimeout(function () {
-                bubble.classList.add('bubble-hide');
-                setTimeout(function () { bubble.remove(); }, 600);
-            }, 3000);
+
+            var fadeTimer = null;
+
+            function showBubble() {
+                clearTimeout(fadeTimer);
+                bubble.classList.remove('bubble-hide');
+                bubble.classList.add('bubble-show');
+                fadeTimer = setTimeout(function () {
+                    bubble.classList.remove('bubble-show');
+                    bubble.classList.add('bubble-hide');
+                }, 2000);
+            }
+
+            function resetBubble() {
+                clearTimeout(fadeTimer);
+                bubble.classList.remove('bubble-show', 'bubble-hide');
+            }
+
+            // Watch the #rooms section — show bubble each time the section enters view
+            var roomsSection = document.querySelector('#rooms');
+            var sectionObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        showBubble();
+                    } else {
+                        resetBubble();
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            sectionObserver.observe(roomsSection);
         }
     });
 
