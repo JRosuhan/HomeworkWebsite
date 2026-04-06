@@ -105,6 +105,18 @@
         });
 
         goImg(0);
+
+        // Thought bubble hint — only for carousels with .swipe-hint-carousel
+        if (carousel.classList.contains('swipe-hint-carousel')) {
+            var bubble = document.createElement('div');
+            bubble.className = 'swipe-hint-bubble';
+            bubble.innerHTML = '<div class="swipe-hint-bubble-body">Click to see more</div>';
+            next.appendChild(bubble);
+            setTimeout(function () {
+                bubble.classList.add('bubble-hide');
+                setTimeout(function () { bubble.remove(); }, 600);
+            }, 3000);
+        }
     });
 
 })();
